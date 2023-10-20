@@ -1,0 +1,260 @@
+@font-face {
+    font-family: 'TTLakes';
+    src: local('TTLakes-Light'), url('./fonts/TTLakes-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: local('TTLakes-Regular'), url('./fonts/TTLakes-Regular.woff') format('woff');
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: local('TTLakes-Medium'), url('./fonts/TTLakes-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'TTLakes';
+    src: local('TTLakes-Bold'), url('./fonts/TTLakes-Bold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+body {
+    width: 100%;
+    margin: 0 auto;
+    max-width: 1200px;
+    font-family: "TTLakes";
+}
+
+a {
+    text-decoration: none;
+}
+
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 24px 16px;
+    border-bottom: #D9FFF5 solid 1px;
+}
+
+.header__burger-logo,
+.header__menu-nav {
+    display: flex;
+    align-items: center;
+    gap: 16px;
+}
+
+.section__adaptiv-right,
+.header__menu-nav-left,
+.main__text_tablet,
+.main__text_monitor,
+.header__burger-logo .header__line {
+    display: none;
+}
+
+.header__line {
+    width: 2px;
+    height: 32px;
+    background-color: #EAEAEA;
+}
+
+.section, .main {
+    background-color: #F8F8F8;
+}
+
+.section h1 {
+    font-weight: 600;
+}
+
+.section__title {
+    padding-top: 24px;
+    padding-left:  16px;
+    white-space: nowrap;
+    position: relative;
+    margin: 0px;
+}
+
+.section__title::before {
+    content: "";
+    display: block;
+    position: absolute;
+    left: 0px;
+    top: 20px;
+    border-top-right-radius: 4px;
+    border-bottom-right-radius: 4px;
+    height: 40px;
+    width: 4px;
+    background-color: #41F6D7;
+}
+
+.section__menu {
+   display: flex;
+   padding: 24px 16px;
+   overflow-x: scroll;
+   white-space: nowrap;
+   gap: 13px;
+}
+
+.section__menu-link {
+    padding: 9px;
+    cursor: pointer;
+    font-weight: 500;
+    color: #7E7E82;
+    border: 2px solid #F8F8F8;
+    
+}
+
+.section__menu_scroll::-webkit-scrollbar {
+    width: 0;
+    height: 0;
+}
+
+.section__menu-link:hover {
+    border: 2px solid #B8FFEC;
+    background-color: #FFFFFF;
+    border-radius: 4px;
+    transition: 0.5s;
+}
+
+.main p {
+    padding-bottom: 10px;
+    margin: 0;
+}
+
+.main {
+    font-size: 14px;
+    font-weight: 400;
+    padding-bottom: 35px;
+}
+
+.main .main__text {
+    padding: 0px 16px;
+}
+
+.summary {
+    cursor: pointer;
+    list-style: none;
+    display: flex;
+    padding-bottom: 10px;
+    font-size: 16px;
+    font-weight: 500;
+}
+
+.summary::before {
+    content: url(img/expand.png);
+}
+
+.main__logotip-img {
+    width: 100%;
+    height: auto;
+}
+
+@media (min-width: 769px) {
+    .header__burger-logo .header__line,
+    .main__text_tablet {
+        display: initial;
+    }
+
+    .header {
+        padding: 24px;
+    }
+
+    .header__menu-nav-left {
+        display: flex;
+        gap: 16px;
+    }
+
+    .main__text_tablet, 
+    .section__title {
+        padding-left: 24px;
+    }
+
+    .section__menu {
+        padding: 32px 24px;
+    }
+
+    .main {
+        display: flex;
+        gap: 30px;
+    }
+
+    .main__text {
+        display: none;
+    }
+
+    .main__text_tablet,
+    .main__logotip {
+        flex-basis: 50%;
+    }
+    
+    .main__logotip {
+        padding-right: 24px;
+    }
+
+    .main__logotip-img {
+        border-radius: 5px;
+    }
+    
+}
+
+@media (min-width: 1120px) {
+    .header {
+        display: none;
+    }
+
+    .section__adaptiv,
+    .section__adaptiv-right,
+    .header__menu-nav-item {
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        font-weight: 500;
+        gap: 8px;
+        color: #1B1C21;
+    }
+
+    .section {
+        padding-top: 42px;
+    }
+
+    .section__title {
+        padding-top: 0px;
+        padding-left: 34px;
+    }
+
+    .section__menu {
+        padding: 8px 25px 32px 32px;
+    }
+
+    .section__title::before {
+        top: -3px;
+    }
+
+    .section__adaptiv-right {
+        gap: 32px;
+        padding-right: 32px;
+    }
+
+    .main__text_tablet {
+        display: none;
+    }
+
+    .main__text_monitor {
+        display: initial;
+        flex-basis: 50%;
+        padding-left: 34px;
+    }
+
+}
