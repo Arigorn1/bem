@@ -41,7 +41,7 @@ a {
     text-decoration: none;
 }
 
-.header {
+.page__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
@@ -50,16 +50,16 @@ a {
 }
 
 .header__burger-logo,
-.header__menu-nav {
+.header__menu {
     display: flex;
     align-items: center;
     gap: 16px;
 }
 
-.section__adaptiv-right,
-.header__menu-nav-left,
-.main__text_tablet,
-.main__text_monitor,
+.section__monitor-link,
+.header__menu-tablet,
+.main__text-tablet,
+.main__text-monitor,
 .header__burger-logo .header__line {
     display: none;
 }
@@ -99,7 +99,7 @@ a {
     background-color: #41F6D7;
 }
 
-.section__menu {
+.section__nav {
    display: flex;
    padding: 24px 16px;
    overflow-x: scroll;
@@ -107,7 +107,7 @@ a {
    gap: 13px;
 }
 
-.section__menu-link {
+.section__nav-link {
     padding: 9px;
     cursor: pointer;
     font-weight: 500;
@@ -116,12 +116,12 @@ a {
     
 }
 
-.section__menu_scroll::-webkit-scrollbar {
+.section__nav--scroll::-webkit-scrollbar {
     width: 0;
     height: 0;
 }
 
-.section__menu-link:hover {
+.section__nav-link:hover {
     border: 2px solid #B8FFEC;
     background-color: #FFFFFF;
     border-radius: 4px;
@@ -163,25 +163,25 @@ a {
 
 @media (min-width: 769px) {
     .header__burger-logo .header__line,
-    .main__text_tablet {
+    .main__text-tablet {
         display: initial;
     }
 
-    .header {
+    .page__header {
         padding: 24px;
     }
 
-    .header__menu-nav-left {
+    .header__menu-tablet {
         display: flex;
         gap: 16px;
     }
 
-    .main__text_tablet, 
+    .main__text-tablet, 
     .section__title {
         padding-left: 24px;
     }
 
-    .section__menu {
+    .section__nav {
         padding: 32px 24px;
     }
 
@@ -194,7 +194,7 @@ a {
         display: none;
     }
 
-    .main__text_tablet,
+    .main__text-tablet,
     .main__logotip {
         flex-basis: 50%;
     }
@@ -210,13 +210,13 @@ a {
 }
 
 @media (min-width: 1120px) {
-    .header {
+    .page__header {
         display: none;
     }
 
-    .section__adaptiv,
-    .section__adaptiv-right,
-    .header__menu-nav-item {
+    .section__monitor,
+    .section__monitor-link,
+    .menu__link {
         display: flex;
         align-items: center;
         justify-content: space-between;
@@ -234,7 +234,7 @@ a {
         padding-left: 34px;
     }
 
-    .section__menu {
+    .section__nav {
         padding: 8px 25px 32px 32px;
     }
 
@@ -242,16 +242,16 @@ a {
         top: -3px;
     }
 
-    .section__adaptiv-right {
+    .section__monitor-link {
         gap: 32px;
         padding-right: 32px;
     }
 
-    .main__text_tablet {
+    .main__text-tablet {
         display: none;
     }
 
-    .main__text_monitor {
+    .main__text-monitor {
         display: initial;
         flex-basis: 50%;
         padding-left: 34px;
